@@ -1,0 +1,370 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #122238; /* Deep institutional navy background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-screen {
+    width: 390px;
+    height: 844px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.app-content {
+    flex: 1;
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 85px; /* Gives enough clearance for the bottom bar */
+}
+/* Header & Brand Accents */
+.header {
+    padding: 20px 20px 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.user-greeting h2 {
+    font-size: 22px;
+    color: #122238;
+}
+
+.user-greeting p {
+    font-size: 13px;
+    color: #666;
+}
+
+.post-item-btn {
+    background-color: #c0392b; /* Institutional Red Accent */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Search Box */
+.search-box {
+    padding: 0 20px;
+    margin: 10px 0;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #f0f4f8;
+    border: 1px solid #d1d9e0;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #c0392b;
+}
+
+/* Promo Banner with Navy and Red Gradient Touch */
+.promo-banner {
+    margin: 10px 20px;
+    background: linear-gradient(135deg, #122238, #c0392b);
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+}
+
+.banner-text h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.banner-text p {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+/* Sections */
+.section {
+    padding: 15px 20px;
+}
+
+.section h3, .section-header {
+    font-size: 16px;
+    color: #122238;
+    margin-bottom: 12px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.see-all {
+    font-size: 13px;
+    color: #c0392b;
+    cursor: pointer;
+}
+
+/* Categories Grid */
+.categories-grid {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.cat-card {
+    background: #f8f9fa;
+    border: 1px solid #e1e4e8;
+    padding: 15px 12px;
+    border-radius: 10px;
+    min-width: 90px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #122238;
+}
+
+/* Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.placeholder-img {
+    width: 100%;
+    height: 100px;
+    background-color: #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.product-card h4 {
+    font-size: 14px;
+    color: #122238;
+    margin-bottom: 4px;
+}
+
+.price {
+    font-size: 13px;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.whatsapp-btn {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background: #ffffff;
+    border-top: 1px solid #e1e4e8;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999; /* Ensures it stays floating on top */
+}
+
+.nav-item {
+    text-decoration: none;
+    font-size: 11px;
+    color: #64748b;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.nav-item.active {
+    color: #c0392b;
+}
+
+/* Forms and Extra Screens */
+.form-container {
+    padding: 20px;
+}
+
+.input-group {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    width: 100%;
+}
+
+.input-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #122238;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"],
+.input-group input[type="tel"],
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #f0f4f8;
+    border: 1px solid #d1d9e0;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #c0392b;
+}
+
+.input-group input[type="file"] {
+    font-size: 13px;
+    color: #555;
+    padding: 6px 0;
+}
+
+.action-btn {
+    background-color: #122238;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.action-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Profile Styles */
+.profile-content {
+    padding: 20px;
+}
+
+.profile-card-header {
+    text-align: center;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e1e4e8;
+    margin-bottom: 20px;
+}
+
+.profile-avatar-placeholder {
+    width: 70px;
+    height: 70px;
+    background-color: #e2e8f0;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+}
+
+.profile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item {
+    background: #fff;
+    border: 1px solid #e1e4e8;
+    padding: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #122238;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.logout-link {
+    color: #c0392b;
+}
+/* Interactive Hover & Press Feedback for All Buttons and Cards */
+.whatsapp-btn:hover {
+    background-color: #20ba5a;
+}
+.whatsapp-btn:active, .action-btn:active, .post-item-btn:active {
+    transform: scale(0.97);
+}
+
+.cat-card {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.cat-card:hover {
+    border-color: #c0392b;
+    background-color: #fdf2f2;
+}
+.cat-card:active {
+    transform: scale(0.95);
+}
+
+.menu-item {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.menu-item:hover {
+    background-color: #f0f4f8;
+    border-color: #122238;
+}
+
+.see-all {
+    cursor: pointer;
+}
+.see-all:hover {
+    text-decoration: underline;
+}

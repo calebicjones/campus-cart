@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Campus Cart</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+    <div class="app-screen">
+        <!-- Top Bar -->
+        <header class="header">
+            <div class="user-greeting">
+                <h2>Student Profile</h2>
+                <p>YMCA Buwambo Campus</p>
+            </div>
+        </header>
+
+        <!-- Scrollable Content Area -->
+        <div class="app-content">
+            <div class="form-container" style="text-align: center; padding-top: 20px;">
+                <div style="width: 80px; height: 80px; background: #122238; color: white; font-size: 32px; font-weight: bold; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin: 0 auto 15px auto;">
+                    C
+                </div>
+                <h3 style="color: #122238; margin-bottom: 5px;">Caleb</h3>
+                <p style="color: #666; font-size: 14px; margin-bottom: 25px;">caleb@student.ymca.ac.ug</p>
+
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; text-align: left; margin-bottom: 20px;">
+                    <h4 style="font-size: 14px; color: #122238; margin-bottom: 5px;">Campus Hub Status</h4>
+                    <p style="font-size: 13px; color: #555;">Connected to Firebase Cloud Database (Active)</p>
+                </div>
+
+                <button class="action-btn" onclick="alert('Logged out successfully!')" style="background-color: #c0392b;">Log Out</button>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation Bar -->
+        <nav class="bottom-nav">
+            <a href="index.html" class="nav-item">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                <span>Home</span>
+            </a>
+            <a href="post.html" class="nav-item">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                <span>Sell</span>
+            </a>
+            <a href="profile.html" class="nav-item active">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <span>Profile</span>
+            </a>
+        </nav>
+    </div>
+
+</body>
+</html>
